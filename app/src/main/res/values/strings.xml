@@ -4,5 +4,7 @@
     <string name="main">Главное</string>
     <string name="Legues">Лиги</string>
     <string name="teams">Команды</string>
+    <string name="football_logo">Football</string>
+    <string name="football_logo_2">Teams</string>
 
 </resources>

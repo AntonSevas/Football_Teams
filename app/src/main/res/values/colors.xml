@@ -10,5 +10,6 @@
     <color name="mainBackground">#F6F6F6</color>
     <color name="addWidgetColor">#EAEAEA</color>
     <color name="widgetClr">#B5B5B5</color>
+    <color name="light_red">#EC6D6D</color>
 
 </resources>
