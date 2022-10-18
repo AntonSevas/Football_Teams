@@ -9,5 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="mainBackground">#F6F6F6</color>
     <color name="addWidgetColor">#EAEAEA</color>
+    <color name="widgetClr">#B5B5B5</color>
 
 </resources>
