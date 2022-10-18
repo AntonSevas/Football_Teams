@@ -38,12 +38,12 @@ public class ClubsAdapter extends RecyclerView.Adapter<ClubsAdapter.ClubsViewHol
     public void onBindViewHolder(@NonNull ClubsViewHolder holder, int position) {
         holder.ClubBG.setBackgroundColor(Color.parseColor(clubs.get(position).getColor()));
 
-        int imageId = context.getResources().getIdentifier("ic_"+clubs.get(position).getImg(),"drawble", context.getPackageName());
+        int imageId = context.getResources().getIdentifier(clubs.get(position).getImg(),"drawable", context.getPackageName());
         holder.clubItem.setImageResource(imageId);
 
-        holder.clubTrainer.setText(clubs.get(position).getClubName());
-        holder.clubCountry.setText(clubs.get(position).getClubName());
-        holder.clubTitle.setText(clubs.get(position).getClubName());
+        holder.clubTrainerID.setText(clubs.get(position).getTrainer());
+        holder.clubCountry.setText(clubs.get(position).getCountry());
+        holder.clubName.setText(clubs.get(position).getClubName());
 
     }
 
@@ -56,7 +56,7 @@ public class ClubsAdapter extends RecyclerView.Adapter<ClubsAdapter.ClubsViewHol
 
         LinearLayout ClubBG;
         ImageView clubItem;
-        TextView clubTitle, clubCountry, clubTrainer;
+        TextView clubName, clubCountry, clubTrainerID;
 
 
 
@@ -65,9 +65,9 @@ public class ClubsAdapter extends RecyclerView.Adapter<ClubsAdapter.ClubsViewHol
 
             ClubBG = itemView.findViewById(R.id.ClubBG);
             clubItem = itemView.findViewById(R.id.clubItem);
-            clubTitle = itemView.findViewById(R.id.clubTitle);
+            clubName = itemView.findViewById(R.id.clubTitle);
             clubCountry = itemView.findViewById(R.id.clubCountry);
-            clubTrainer = itemView.findViewById(R.id.clubTrainer);
+            clubTrainerID = itemView.findViewById(R.id.TrainerID);
         }
     }
 }

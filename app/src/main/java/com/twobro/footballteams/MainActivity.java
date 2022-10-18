@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
         setCategoryRecycler(categoryList);
 
         List<Clubs> clubsList = new ArrayList<>();
-        clubsList.add(new Clubs(1,"Man","Manchester","Англия", "Эрик тен Хаг", "#EC5252"));
-        clubsList.add(new Clubs(2,"Zenit","Zenit", "Россия", "Сергей Богданович Семак", "#40BDC5"));
+        clubsList.add(new Clubs(1,"manchester_logo","Manchester","Англия", "Эрик тен Хаг", "#EC5252"));
+        clubsList.add(new Clubs(2,"manchester_logo","Zenit", "Россия", "Сергей Богданович Семак", "#40BDC5"));
 
 
         setClubsRecycler(clubsList);

@@ -11,9 +11,7 @@
     <string name="Manchester">Manchester</string>
     <string name="Trainer">Тренер</string>
     <string name="Level">Уровень</string>
-    <string name="Country_id" />
-    <string name="Trainer_id" />
-    <string name="clubTrainer" />
+
 
 
 </resources>
