@@ -8,7 +8,7 @@
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-
+        android:id="@+id/ClubBG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="20dp"
@@ -20,10 +20,9 @@
 
         <LinearLayout
 
-            android:id="@+id/ClubBG"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/black"
             android:orientation="vertical">
 
             <ImageView
@@ -31,7 +30,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/Manchester"
-
                 app:srcCompat="@drawable/manchester_logo" />
 
             <TextView

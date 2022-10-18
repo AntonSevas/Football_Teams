@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.twobro.footballteams.R;
@@ -54,7 +55,7 @@ public class ClubsAdapter extends RecyclerView.Adapter<ClubsAdapter.ClubsViewHol
 
     public static final class ClubsViewHolder extends RecyclerView.ViewHolder {
 
-        LinearLayout ClubBG;
+        CardView ClubBG;
         ImageView clubItem;
         TextView clubName, clubCountry, clubTrainerID;
 
