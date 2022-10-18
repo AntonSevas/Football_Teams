@@ -7,5 +7,13 @@
     <string name="football_logo">Football</string>
     <string name="football_logo_2">Teams</string>
     <string name="categor_plits">categor_plits</string>
+    <string name="Country">Страна</string>
+    <string name="Manchester">Manchester</string>
+    <string name="Trainer">Тренер</string>
+    <string name="Level">Уровень</string>
+    <string name="Country_id" />
+    <string name="Trainer_id" />
+    <string name="clubTrainer" />
+
 
 </resources>

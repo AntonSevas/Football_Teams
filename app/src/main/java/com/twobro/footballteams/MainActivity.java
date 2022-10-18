@@ -7,14 +7,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.twobro.footballteams.adapter.CategoryAdapter;
+import com.twobro.footballteams.adapter.ClubsAdapter;
 import com.twobro.footballteams.model.Category;
+import com.twobro.footballteams.model.Clubs;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    RecyclerView categoryRecycler;
+    RecyclerView categoryRecycler, clubsRecycler;
+    ClubsAdapter clubsAdapter;
     CategoryAdapter categoryAdapter;
 
 
@@ -31,6 +34,24 @@ public class MainActivity extends AppCompatActivity {
 
         setCategoryRecycler(categoryList);
 
+        List<Clubs> clubsList = new ArrayList<>();
+        clubsList.add(new Clubs(1,"Man","Manchester","Англия", "Эрик тен Хаг", "#EC5252"));
+        clubsList.add(new Clubs(2,"Zenit","Zenit", "Россия", "Сергей Богданович Семак", "#40BDC5"));
+
+
+        setClubsRecycler(clubsList);
+
+    }
+
+    private void setClubsRecycler(List<Clubs> clubsList) {
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this,RecyclerView.HORIZONTAL,false);
+
+        clubsRecycler = findViewById(R.id.clubsRecycler);
+        clubsRecycler.setLayoutManager(layoutManager);
+
+        clubsAdapter = new ClubsAdapter(this,clubsList);
+        clubsRecycler.setAdapter(clubsAdapter);
     }
 
     private void setCategoryRecycler(List<Category> categoryList) {
