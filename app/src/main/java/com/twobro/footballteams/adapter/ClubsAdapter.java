@@ -37,7 +37,7 @@ public class ClubsAdapter extends RecyclerView.Adapter<ClubsAdapter.ClubsViewHol
 
     @Override
     public void onBindViewHolder(@NonNull ClubsViewHolder holder, int position) {
-        holder.ClubBG.setBackgroundColor(Color.parseColor(clubs.get(position).getColor()));
+        holder.ClubBG.setCardBackgroundColor(Color.parseColor(clubs.get(position).getColor()));
 
         int imageId = context.getResources().getIdentifier(clubs.get(position).getImg(),"drawable", context.getPackageName());
         holder.clubItem.setImageResource(imageId);
