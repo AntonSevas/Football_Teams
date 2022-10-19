@@ -59,8 +59,8 @@
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/cabin"
                     android:text="@string/Trainer"
                     android:textColor="@color/white"
@@ -75,9 +75,10 @@
                 <TextView
                     android:id="@+id/clubCountry"
 
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
                     android:fontFamily="@font/cabin_bold"
                     android:text="@string/Country"
                     android:textColor="@color/white"
@@ -87,8 +88,9 @@
                     android:id="@+id/TrainerID"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="60dp"
-                    android:layout_marginTop="5dp"
+
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/cabin_bold"
                     android:text="@string/Trainer"
                     android:textColor="@color/white"
