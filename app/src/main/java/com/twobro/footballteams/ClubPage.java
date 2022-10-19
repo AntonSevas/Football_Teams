@@ -15,7 +15,7 @@ public class ClubPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_club_page);
 
-        ConstraintLayout clubBg = findViewById(R.id.ClubBG);
+        ConstraintLayout clubBg = findViewById(R.id.clubPageBg);
         ImageView clubImage = findViewById(R.id.clubPageImage);
         TextView clubTitle = findViewById(R.id.clubTitle);
         TextView clubCountry = findViewById(R.id.clubPageCountry);
