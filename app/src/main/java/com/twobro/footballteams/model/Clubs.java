@@ -3,15 +3,24 @@ package com.twobro.footballteams.model;
 public class Clubs {
 
     int id;
-    String img, clubName, country, trainer, color;
+    String img, clubName, country, trainer, color, text;
 
-    public Clubs(int id, String img, String clubName, String country, String trainer, String color) {
+    public Clubs(int id, String img, String clubName, String country, String trainer, String color, String text) {
         this.id = id;
         this.img = img;
         this.clubName = clubName;
         this.country = country;
         this.trainer = trainer;
         this.color = color;
+        this.text = text;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 
     public int getId() {

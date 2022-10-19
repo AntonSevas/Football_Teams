@@ -52,6 +52,14 @@ public class ClubsAdapter extends RecyclerView.Adapter<ClubsAdapter.ClubsViewHol
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, ClubPage.class);
+
+                intent.putExtra("clubBG",Color.parseColor(clubs.get(position).getColor()));
+                intent.putExtra("clubImage",imageId);
+                intent.putExtra("clubName",clubs.get(position).getClubName());
+                intent.putExtra("clubCountry",clubs.get(position).getCountry());
+                intent.putExtra("clubTrainer",clubs.get(position).getTrainer());
+                intent.putExtra("clubText",clubs.get(position).getText());
+
                 context.startActivity(intent);
             }
         });
