@@ -204,9 +204,11 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
         android:background="@android:color/transparent"
+        android:contentDescription="@string/app_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/constraintLayout"
         app:layout_constraintTop_toBottomOf="@+id/clubDescription"
-        app:srcCompat="@drawable/shop" />
+        app:srcCompat="@drawable/shop"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

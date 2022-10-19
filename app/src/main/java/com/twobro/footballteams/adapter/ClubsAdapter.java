@@ -1,6 +1,7 @@
 package com.twobro.footballteams.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.twobro.footballteams.ClubPage;
 import com.twobro.footballteams.R;
 import com.twobro.footballteams.model.Clubs;
 
@@ -45,6 +47,14 @@ public class ClubsAdapter extends RecyclerView.Adapter<ClubsAdapter.ClubsViewHol
         holder.clubTrainerID.setText(clubs.get(position).getTrainer());
         holder.clubCountry.setText(clubs.get(position).getCountry());
         holder.clubName.setText(clubs.get(position).getClubName());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, ClubPage.class);
+                context.startActivity(intent);
+            }
+        });
 
     }
 
