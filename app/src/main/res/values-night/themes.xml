@@ -15,6 +15,7 @@
 
         <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
+        <item name="android:windowActivityTransitions">true</item>
 
     </style>
 </resources>

@@ -1,8 +1,11 @@
 package com.twobro.footballteams.adapter;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,14 +56,20 @@ public class ClubsAdapter extends RecyclerView.Adapter<ClubsAdapter.ClubsViewHol
             public void onClick(View view) {
                 Intent intent = new Intent(context, ClubPage.class);
 
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(
+                        (Activity)  context,
+                        new Pair<View, String>(holder.clubItem, "clubImage"));
+
+
+
                 intent.putExtra("clubBG",Color.parseColor(clubs.get(position).getColor()));
                 intent.putExtra("clubImage",imageId);
-                intent.putExtra("clubName",clubs.get(position).getClubName());
+                intent.putExtra("clubTitle",clubs.get(position).getClubName());
                 intent.putExtra("clubCountry",clubs.get(position).getCountry());
                 intent.putExtra("clubTrainer",clubs.get(position).getTrainer());
                 intent.putExtra("clubText",clubs.get(position).getText());
 
-                context.startActivity(intent);
+                context.startActivity(intent, options.toBundle());
             }
         });
 
