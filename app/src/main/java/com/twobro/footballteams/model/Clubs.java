@@ -2,10 +2,10 @@ package com.twobro.footballteams.model;
 
 public class Clubs {
 
-    int id;
+    int id, category;
     String img, clubName, country, trainer, color, text;
 
-    public Clubs(int id, String img, String clubName, String country, String trainer, String color, String text) {
+    public Clubs(int id, String img, String clubName, String country, String trainer, String color, String text,int category) {
         this.id = id;
         this.img = img;
         this.clubName = clubName;
@@ -13,6 +13,15 @@ public class Clubs {
         this.trainer = trainer;
         this.color = color;
         this.text = text;
+        this.category = category;
+    }
+
+    public int getClub() {
+        return category;
+    }
+
+    public void setClub(int club) {
+        this.category = club;
     }
 
     public String getText() {

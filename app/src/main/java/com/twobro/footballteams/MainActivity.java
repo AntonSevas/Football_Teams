@@ -17,8 +17,10 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView categoryRecycler, clubsRecycler;
-    ClubsAdapter clubsAdapter;
     CategoryAdapter categoryAdapter;
+    static ClubsAdapter clubsAdapter;
+    static List<Clubs> clubsList = new ArrayList<>();
+
 
 
     @Override0
@@ -35,9 +37,9 @@ public class MainActivity extends AppCompatActivity {
         setCategoryRecycler(categoryList);
 
         List<Clubs> clubsList = new ArrayList<>();
-        clubsList.add(new Clubs(1,"manchester_logo","Manchester","Англия", "Эрик тен Хаг", "#EC5252","Test"));
-        clubsList.add(new Clubs(2,"zenit","Zenit", "Россия", "Сергей Богданович Семак", "#40BDC5","Test"));
-        clubsList.add(new Clubs(3,"manchester_logo","Manchester","Англия", "Эрик тен Хаг", "#EC5252","Test"));
+        clubsList.add(new Clubs(1,"manchester_logo","Manchester","Англия", "Эрик тен Хаг", "#DA020E","Test", 1));
+        clubsList.add(new Clubs(2,"zenit","Zenit", "Россия", "Сергей Богданович Семак", "#40BDC5","Test",2));
+        clubsList.add(new Clubs(3,"bvb","Borussia Dortmund","Германия", "Эдин Терзич", "#424345","Test", 3));
 
 
         setClubsRecycler(clubsList);
@@ -68,4 +70,21 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    public static void showClubsByCategory(int category){
+
+        List<Clubs> filterClubs = new ArrayList<>();
+
+        for(Clubs c: clubsList) {
+            if(c.getClub() == category);  //getClubs ошибка
+                 filterClubs.add(c);
+        }
+
+        clubsList.clear();
+        clubsList.addAll(filterClubs);
+
+        clubsAdapter.notifyDataSetChanged();
+
+    }
+
 }
